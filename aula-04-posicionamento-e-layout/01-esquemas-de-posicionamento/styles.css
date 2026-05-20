@@ -1,0 +1,58 @@
+.caixa {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: #ccc;
+}
+
+.static {
+    position: static;
+    background-color: #8cc9e4;
+}
+
+.relative {
+    position: relative;
+    background-color: #4caf50;
+    /* top, bottom, left, right */
+    left: 200px;
+    top: 50px;
+}
+
+/* O posicionamento relative mantém o seu espaço reservado no fluxo do documento */
+
+.absolute {
+    position: absolute;
+    margin: 0;
+    background-color: #ff6347;
+    top: 100px;
+    z-index: 2;
+}
+
+.sup {
+    background-color: purple;
+    top: 150px;
+    z-index: 1;
+}
+
+/* Position absolute desloca o elemento do seu fluxo natural (cria uma camada flutuante). É possível controlar o empilhamento com a propriedade z-index */
+
+.fixed {
+    position: fixed;
+    background-color: chocolate;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* O position fixed trava um elemento na tela a partir de um posicionamento específico */
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    background-color: blue;
+}
+
+.espaco {
+    height: 900px;
+    background-color: lightcyan;
+}
