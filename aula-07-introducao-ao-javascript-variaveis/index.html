@@ -1,41 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introdução ao Javascript</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Introdução ao Javascript</h1>
     <p>Eu sou ...</p>
-</body>
-<!-- Javascript Interno -->
-<script>
-//Aqui irá o código Javascript
-//Comentário em linha
-/*Comentário
-em
-bloco*/
+  </body>
+  <!-- Javascript Interno -->
+  <script>
+    //Aqui irá o código Javascript
+    //Comentário em linha
+    /*Comentário
+    em
+    bloco*/
 
-//DECLARANDO VARIÁVEIS
-//VAR
-var nome="Davi";
-document.write(nome);
-document.write('<br>');
-var nome="Davi";
-document.write(nome);
+    //DECLARANDO VARIÁVEIS
+    //VAR
+    // var nome = "Davi";
+    // document.write(nome);
+    // document.write("<br>");
+    //Solicitando dados ao usuário
+    var nome = window.prompt("Digite o sue nome:");
+    document.write(nome);
 
-//LET
-let cidade="Registro";
-//let cidade="Pariquera"; -> Não é possivel
-cidade="São Paulo";
-document.write('<br>');
-document.write("Eu moro em " + cidade + '<br>')
+    //LET
+    let cidade = window.prompt("Digite a sua cidade:");
+    //let cidade="Pariquera"; -> Não é possivel
+    //cidade = "São Paulo";
+    document.write("<br>");
+    document.write("Eu moro em " + cidade + "<br>");
 
-//CONST -> CONSTANTE
-const idade=16;
-//idade=17;
-document.write("Eu tenho " + idade + " anos")
-//const idade = 18 -> Não é possivel
-</script>
+    //CONST -> CONSTANTE
+    const idade = Number(window.prompt("Digite a sua idade:"));
+    //idade=17;
+    document.write("Eu tenho " + idade + " anos <br>");
+    //const idade = 18 -> Não é possivel
+
+    //VERIFICANDO O TIPO DAS VARIÁVEIS
+    document.write("O tipo da variável nome é " + typeof nome);
+    document.write("<br> O tipo da variável idade é " + typeof idade);
+    // O JAVASCRIPT ATRIBUI OS TIPOS ÀS VARIÁVEIS DE FORMA DINÂMICA
+
+    //exibindo uma mensagem de alerta ao usuário
+    window.alert(`Bem-vindo ${nome}!`);
+
+    //Solicitando ao usuário dois números
+    const n1 = Number(window.prompt("DIgite um número:"));
+    const n2 = Number(window.prompt("Digite outro número:"));
+    const soma = n1 + n2;
+    document.write(`<br>O resultado da soma de ${n1} + ${n2} é ${soma}`);
+
+    //Formatando strings
+    document.write(`<br>Seu nome em letras maiúsculas é ${nome.toUpperCase()}`);
+    document.write(
+      `<br>Seu nome em letras minúsculas é ${nome.toLocaleLowerCase()}`,
+    );
+
+    //Formatação de números
+    const salario = 2500;
+    document.write(`<br>Salário com casas decimais: ${salario.toFixed(2)}`);
+    document.write(
+      `<br>Salário com casa decimal em vírgula: ${salario.toFixed(2).replace(".", ",")}`,
+    );
+
+    //Formatação de moeda
+    //REAL
+    document.write(
+      `<br> Salário em real: ${salario.toLocaleString("pt-br", { style: "currency", currency: BRL })}`,
+    );
+
+    //DOLAR
+    document.write(
+      `<br> Salário em dólar: ${salario.toLocaleString("pt-br", { style: "currency", currency: USD })}`,
+    );
+
+    //EXERCíCIO - AULA 07
+    //Crie uma página em Javascript que solicite os seguintes dados ao usuário:
+    /*1 - nome
+    2 - ano de nascimento
+    3- cidade
+    4- salário
+    
+    Após receber esses dados o sistema deve imprimir na página:
+    1 - O nome do usuário
+    2 - Sua idade
+    3 - Sua cidade  em letras maisculas
+    4 - Seu salario formando e convertido para dolar*/
+  </script>
 </html>
