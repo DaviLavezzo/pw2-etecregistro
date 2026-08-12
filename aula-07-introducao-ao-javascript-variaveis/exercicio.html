@@ -8,7 +8,15 @@
 <body>
     <script>
         let nome = window.prompt(`Digite o seu nome:`)
-        const ano = window.prompt(``)
+        const ano = Number(window.prompt(`Digite o seu ano de nascimento:`))
+        let cidade = window.prompt("Digite a sua cidade:");
+        const salario = Number(window.prompt(`Digite o seu salário:`))
+        window.alert(`Bem-vindo ${nome}`)
+        document.write(`O seu nome é ${nome}`)
+        const idade = 2026-ano
+        document.write(`<br>A sua idade é ${idade}`)
+        document.write(`<br>O nome da sua cidade em letras maiúsculas é ${cidade.toUpperCase()}`)
+        document.write(`<br>Seu salário em dólar é ${salario.toLocaleString("pt-br", { style: "currency", currency: 'USD' })}`)
     </script>
 </body>
 </html>
