@@ -1,0 +1,12 @@
+/*CSS*/
+body {
+    font: normal 10pt
+    Arial;
+}
+input {
+    font: normal 10pt
+    Arial;
+}
+div#resultado {
+    margin-top: 10px;
+}

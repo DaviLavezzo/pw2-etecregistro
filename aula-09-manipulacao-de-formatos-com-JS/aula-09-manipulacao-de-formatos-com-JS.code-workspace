@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Prova-PW-DaviLavezzo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Prova-PW-DaviLavezzo"
+	}
+}
